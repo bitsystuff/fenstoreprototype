@@ -2,6 +2,12 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Define the theme variables so var(--gjs-t-color-success) actually resolves */
+:root {
+  --gjs-t-color-success: #16a34a; /* green */
+  --gjs-t-color-accent: #60a5fa;  /* blue for focus outlines */
+}
+
 #i3p5 {
   background-image: unset;
   background-position: unset;
@@ -279,7 +285,7 @@ html {
   text-decoration: none;
   width: calc(100% - 20px);
   margin: 0 10px 10px 10px;
-  background-color: var(--gjs-t-color-success);
+  background-color: var(--gjs-t-color-success, #16a34a);
   color: #ffffff;
   border-radius: 0.3rem;
   border: 1px solid rgba(0, 0, 0, 0.25);
@@ -287,18 +293,18 @@ html {
 }
 
 .btn-product:focus-visible {
-  outline: 2px solid var(--gjs-t-color-accent);
+  outline: 2px solid var(--gjs-t-color-accent, #60a5fa);
   outline-offset: 2px;
 }
 
 .btn-product:hover {
-  background-color: var(--gjs-t-color-success);
+  background-color: var(--gjs-t-color-success, #16a34a);
   color: #000000;
   border-color: #000000;
 }
 
 .btn-product:active {
-  background-color: var(--gjs-t-color-success);
+  background-color: var(--gjs-t-color-success, #16a34a);
   color: #000000;
   border-color: #000000;
 }
@@ -365,7 +371,7 @@ html {
   text-decoration: none;
   width: auto;
   margin: 15px;
-  background-color: var(--gjs-t-color-success);
+  background-color: var(--gjs-t-color-success, #16a34a);
   color: #ffffff;
   border-radius: 0.3rem;
   border: 1px solid rgba(0, 0, 0, 0.25);
@@ -376,20 +382,20 @@ html {
 }
 
 #social-buttons-block .btn-social:hover {
-  background-color: var(--gjs-t-color-success);
+  background-color: var(--gjs-t-color-success, #16a34a);
   color: #000000;
   border-color: #000000;
 }
 
 #social-buttons-block .btn-social:active {
   transform: translateY(1px);
-  background-color: var(--gjs-t-color-success);
+  background-color: var(--gjs-t-color-success, #16a34a);
   color: #000000;
   border-color: #000000;
 }
 
 #social-buttons-block .btn-social:focus-visible {
-  outline: 2px solid var(--gjs-t-color-accent);
+  outline: 2px solid var(--gjs-t-color-accent, #60a5fa);
   outline-offset: 2px;
 }
 
